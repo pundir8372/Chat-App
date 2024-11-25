@@ -71,7 +71,7 @@ PORT=5001
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/iemafzalhassan/full-stack_chatApp.git
+ git clone https://github.com/pundir8372/Chat-App.git
 ```
 
 🏗️ Build and Run the Application
@@ -108,7 +108,7 @@ cd full-stack_chatApp
 ## Create a Docker network:
 
 ```bash
-docker network create full-stack
+docker network create chat-app
 ```
 
 ## 🛠️ Building the Frontend
@@ -124,7 +124,7 @@ docker build -t full-stack_frontend .
 ### Run the Frontend container:
 
 ```bash
-docker run -d --network=full-stack  -p 5173:5173 --name frontend full-stack_frontend:latest
+docker run -d --network=chat-app  -p 5173:5173 --name frontend full-stack_frontend:latest
 ```
 #### The frontend will now be accessible on port 5173.
 
@@ -151,7 +151,7 @@ docker build -t full-stack_backend .
 ### Run the Backend container:
 
 ```bash
-docker run -d --network=full-stack --add-host=host.docker.internal:host-gateway -p 5001:5001 --env-file .env full-stack_backend
+docker run -d --network=chat-app --add-host=host.docker.internal:host-gateway -p 5001:5001 --env-file .env full-stack_backend
 ```
 #### This will build and run the backend container, exposing the backendAPI on port 5001.
 
