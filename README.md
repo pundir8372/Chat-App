@@ -62,7 +62,7 @@ cd backend
 ```
 2. Create a `.env` file and add the following content (modify the values as needed):
 ```env
-MONGODB_URI=mongodb://mongo:27017/chatapp
+MONGODB_URI=mongodb://host.docker.internal:27017/chatapp
 JWT_SECRET=your_jwt_secret_key
 PORT=5001
 ```
